@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Your Name / Site Title"
+title                    : "SAMA"
 title_separator          : "-"
 name                     : &name "Your Name"
 description              : &description "personal description"
@@ -23,13 +23,13 @@ repository               : "academicpages/academicpages.github.io"
 author:
   # Biographic information
   avatar           : "./sama.png"
-  name             : "Your Sidebar Name"
+  name             : "Qiushi Guo"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "A Married CVer "
+  location         : "China"
+  employer         : "TU Kaiserslautern"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "guoqiushi910@gmail.com" 
 
   # Academic websites
   academia         : # URL
