@@ -1,5 +1,5 @@
 ---
 title: "Railway Obstacles Detection System"
-excerpt: "Short description of portfolio item number 1<br/><img src='/images/pipeline.png'>"
+excerpt: "VEHITS 2025 best poster paper candidate<br/><img src='/images/pipeline.png'>"
 collection: portfolio
 ---
