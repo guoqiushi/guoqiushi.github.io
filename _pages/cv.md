@@ -11,35 +11,33 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* M.S. in TU Kaiserslautern(Germany), 2017-2020
+* B.S. in UESTC(China), 2012-2016
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* 2024-Now: AI Engineer
+  * CSRD
+  * Duties includes: Railway Obstacles Detection System
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+* 2021-2024: AI Engineer
+  * AI Lab, China Merchants Bank
+  * Duties included: Face antispoofing
+  
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* 2019: Research Assistant
+  * DFKI
+  * Duties included: Remote Sensing, Indoor localization
+  * Supervisor: Patrick Helber, Benjamin Bischke
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Python, C++,
+* Language
+  * English
+  * German
+  * Chinese
+
 
 Publications
 ======
