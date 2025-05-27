@@ -32,12 +32,15 @@ Work experience
   
 Skills
 ======
-* Python, C++,
+* Python, C++, Shell
 * Language
   * English
   * German
   * Chinese
-
+* Tool
+  * Docker
+  * Flask
+  * github
 
 Publications
 ======
