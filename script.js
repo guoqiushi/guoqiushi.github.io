@@ -41,6 +41,34 @@
     papers.forEach(paper => { paper.hidden = button.dataset.filter !== 'all' && !paper.dataset.topics.split(' ').includes(button.dataset.filter); });
     updateCount();
   }));
+
+  const milestones = [...document.querySelectorAll('.visual-milestone')];
+  document.querySelectorAll('[data-timeline-filter]').forEach(button => button.addEventListener('click', () => {
+    document.querySelectorAll('[data-timeline-filter]').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
+    milestones.forEach(item => { item.hidden = button.dataset.timelineFilter !== 'all' && item.dataset.timelineKind !== button.dataset.timelineFilter; });
+  }));
+  const viewer = document.querySelector('#timeline-viewer');
+  const gallery = [...document.querySelectorAll('[data-timeline-image]')];
+  let imageIndex = 0;
+  function showTimelineImage(index) {
+    imageIndex = (index + gallery.length) % gallery.length;
+    const source = gallery[imageIndex];
+    const title = source.closest('.milestone-card').querySelector(`h3 span[lang="${root.lang}"]`).textContent;
+    const image = document.querySelector('#timeline-large-image');
+    image.src = source.dataset.timelineImage;
+    image.alt = title;
+    document.querySelector('#timeline-image-title').textContent = title;
+    document.querySelector('#timeline-image-count').textContent = `${imageIndex + 1} / ${gallery.length}`;
+  }
+  gallery.forEach((button, index) => button.addEventListener('click', () => { showTimelineImage(index); viewer.showModal(); }));
+  document.querySelector('[data-viewer-close]').addEventListener('click', () => viewer.close());
+  document.querySelector('[data-viewer-prev]').addEventListener('click', () => showTimelineImage(imageIndex - 1));
+  document.querySelector('[data-viewer-next]').addEventListener('click', () => showTimelineImage(imageIndex + 1));
+  viewer.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); showTimelineImage(imageIndex + (event.key === 'ArrowLeft' ? -1 : 1)); }
+  });
+  viewer.addEventListener('click', event => { if (event.target === viewer) { const rect = viewer.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) viewer.close(); } });
+
   const links = [...document.querySelectorAll('.sidebar nav a')];
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver(entries => {
