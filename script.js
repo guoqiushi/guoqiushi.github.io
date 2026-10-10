@@ -42,10 +42,14 @@
     updateCount();
   }));
 
+  const timelineRail = document.querySelector('.visual-timeline');
+  document.querySelector('[data-timeline-back]').addEventListener('click', () => timelineRail.scrollBy({left: -308, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}));
+  document.querySelector('[data-timeline-forward]').addEventListener('click', () => timelineRail.scrollBy({left: 308, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}));
   const milestones = [...document.querySelectorAll('.visual-milestone')];
   document.querySelectorAll('[data-timeline-filter]').forEach(button => button.addEventListener('click', () => {
     document.querySelectorAll('[data-timeline-filter]').forEach(other => other.setAttribute('aria-pressed', String(other === button)));
     milestones.forEach(item => { item.hidden = button.dataset.timelineFilter !== 'all' && item.dataset.timelineKind !== button.dataset.timelineFilter; });
+    timelineRail.scrollLeft = 0;
   }));
   const viewer = document.querySelector('#timeline-viewer');
   const gallery = [...document.querySelectorAll('[data-timeline-image]')];
